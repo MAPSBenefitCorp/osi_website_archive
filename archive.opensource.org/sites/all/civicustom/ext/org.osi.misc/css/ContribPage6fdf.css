@@ -1,0 +1,11 @@
+.radiobuttons-form-radios-as-buttons .crm-radio-wrapper {
+  margin-bottom: 4px;
+}
+.crm-container .crm-button {
+  background-color: #056186;
+  border: none;
+  padding: 10px 18px;
+}
+.crm-container .crm-button:hover {
+  background-color: #054a66;
+}

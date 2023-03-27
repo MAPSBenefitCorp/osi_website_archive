@@ -1,0 +1,69 @@
+/**
+ * CSS for fancier radio buttons.
+ * c.f. CRM.symbioticuxFormRadiosAsButtons()
+ * A lot of '!important' statements because of shoreditch.
+ */
+.radiobuttons-form-radios-as-buttons .crm-radio-wrapper {
+  display: inline-block;
+  height: auto !important;
+  line-height: 1em !important;
+  border: 1px solid #ccc !important; /* FIXME */
+  border-radius: 5px !important;
+  margin-right: 10px !important;
+  text-align: center !important;
+  cursor: pointer !important;
+}
+.radiobuttons-form-radios-as-buttons .crm-radio-wrapper-100px {
+  width: 100px !important;
+}
+.radiobuttons-form-radios-as-buttons .crm-radio-wrapper-200px {
+  width: 200px !important;
+}
+.crm-container .radiobuttons-form-radios-as-buttons .crm-radio-wrapper-400px,
+.crm-container .radiobuttons-form-radios-as-buttons .crm-radio-wrapper-600px {
+  /* On mobile, assume it will take most of the width */
+  width: 100%;
+}
+@media (min-width: 600px) {
+  .radiobuttons-form-radios-as-buttons .crm-radio-wrapper-400px {
+    width: 400px !important;
+  }
+  .radiobuttons-form-radios-as-buttons .crm-radio-wrapper-600px {
+    width: 600px !important;
+  }
+}
+.radiobuttons-form-radios-as-buttons .crm-radio-wrapper label {
+  display: block;
+  margin: 0 !important;
+  white-space: nowrap;
+}
+.radiobuttons-form-radios-as-buttons .crm-radio-wrapper label {
+  padding: 12px 10px !important;
+}
+.radiobuttons-form-radios-as-buttons .value {
+  font-size: 0; /* whitespace cringe when display:inline-block */
+}
+.radiobuttons-form-radios-as-buttons .crm-clear-link {
+  display: none !important; /* no need for clear-link if we can unselect buttons */
+}
+.case-tab-activities .radiobuttons-form-radios-as-buttons .crm-radio-wrapper {
+  padding-bottom: 30px !important; /* no idea why, on case-activity, needs more padding */
+}
+.radiobuttons-form-radios-as-buttons .crm-radio-wrapper:hover {
+  background: #eee; /* FIXME */
+}
+.radiobuttons-form-radios-as-buttons .crm-radio-wrapper.selected {
+  background: #056186; /* FIXME */
+}
+.radiobuttons-form-radios-as-buttons .crm-radio-wrapper.selected > label {
+  color: #fff !important;
+}
+.radiobuttons-form-radios-as-buttons input[type=radio] {
+  display: none;
+}
+.crm-container .radiobuttons-form-radios-as-buttons input[type="radio"]:not(.old-radiocheckbox-style) + label[for]::before,
+.crm-container .radiobuttons-form-radios-as-buttons input[type="radio"]:not(.old-radiocheckbox-style):checked + label[for]::after {
+  content: '' !important; /* remove fake radio button */
+  display: none;
+  background: inherit !important;
+}
